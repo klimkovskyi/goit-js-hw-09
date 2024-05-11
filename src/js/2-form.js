@@ -34,13 +34,14 @@ form.addEventListener("submit", handleSubmit);
 function handleSubmit(event) {
     event.preventDefault();
 
-    if (formData.email.trim() === "" || formData.message.trim() === "") {
+    if (email.value.trim() === "" || message.value.trim() === "") {
         alert("Please fill in all fields.");
         return; 
     }
 
-    localStorage.removeItem(localStorageKey);
     console.log(formData);
+
+    localStorage.removeItem(localStorageKey);
 
     form.reset();
 }
